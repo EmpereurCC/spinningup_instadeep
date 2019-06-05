@@ -1,8 +1,10 @@
-from os.path import join, dirname, realpath
-from setuptools import setup
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
+
+from os.path import join, dirname, realpath
+from setuptools import setup
+
 import sys
 
 assert sys.version_info.major == 3 and sys.version_info.minor >= 6, \
