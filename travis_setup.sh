@@ -33,7 +33,9 @@ then
     set -e
 
     sudo chmod +x /usr/local/bin/patchelf
-    curl $MUJOCO_FOR_LINUX | tar xz -C $HOME/.mujoco/
+    curl -o $HOME/mujoco.zip $MUJOCO_FOR_LINUX
+    cd $HOME/.mujoco/
+    unzip $HOME/mujoco.zip
 
     sudo apt-get update
     sudo apt-get install -y openmpi-bin libopenmpi-dev libosmesa6-dev libglew-dev
