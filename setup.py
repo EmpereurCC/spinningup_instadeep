@@ -12,28 +12,6 @@ assert sys.version_info.major == 3 and sys.version_info.minor >= 6, \
 with open(join("spinup", "version.py")) as version_file:
     exec(version_file.read())
 
-"""pycolab PyPI package setup."""
-
-
-
-try:
-  import setuptools
-except ImportError:
-  from ez_setup import use_setuptools
-  use_setuptools()
-  import setuptools
-
-# Warn user about how curses is required to play games yourself.
-try:
-  import curses
-except ImportError:
-  import warnings
-  warnings.warn(
-      'The human_ui module and all of the example games (when run as '
-      'standalone programs) require the curses library. Without curses, you '
-      'can still use pycolab as a library, but you won\'t be able to play '
-      'pycolab games on the console.')
-
 setup(
     name='spinup',
     py_modules=['spinup'],
