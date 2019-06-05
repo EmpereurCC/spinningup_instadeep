@@ -13,7 +13,7 @@ then
     brew install open-mpi
     brew install gcc
     brew link --overwrite gcc
-    curl $MUJOCO_FOR_OSX | tar xz -C $HOME/.mujoco/
+    #curl $MUJOCO_FOR_OSX | tar xz -C $HOME/.mujoco/
 elif [ "$TRAVIS_OS_NAME" == "linux" ]
 then
     # Because this is flaky, try several times
@@ -33,9 +33,9 @@ then
     set -e
 
     sudo chmod +x /usr/local/bin/patchelf
-    curl -o $HOME/mujoco.zip $MUJOCO_FOR_LINUX
-    cd $HOME/.mujoco/
-    unzip $HOME/mujoco.zip
+    #curl -o $HOME/mujoco.zip $MUJOCO_FOR_LINUX
+    #cd $HOME/.mujoco/
+    #unzip $HOME/mujoco.zip
 
     sudo apt-get update
     sudo apt-get install -y openmpi-bin libopenmpi-dev libosmesa6-dev libglew-dev
