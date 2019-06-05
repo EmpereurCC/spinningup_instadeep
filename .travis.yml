@@ -10,6 +10,7 @@ before_install:
 script:
     - pip3 install -e .
 #    - python3 -c "import mujoco_py"
+    - python3 PycoGYM/gym_pyco/setup.py install
     - python3 -c "import spinup"
     - python3 -m pytest
     
