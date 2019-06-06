@@ -1,3 +1,4 @@
+name="gym_pyco"
 from gym.envs.registration import register
 
 register(
